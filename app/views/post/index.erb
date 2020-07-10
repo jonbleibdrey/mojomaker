@@ -1,0 +1,10 @@
+<h1>MOTHER MOJO MAKER</h1>
+<a href="/post/new"> make post </a> <br>
+
+<% @posts.each do |post| %>
+title: <%= post.title %> <br>
+content: <%= post.content %> <br>
+<img src="<%= post.photo_url %>" alt="<%= post.content %>">
+<%# posted by: <%= @user.find_by_id(post.user_id).name %> <br>
+posted at: <%= post.created_at %>
+<%end%>

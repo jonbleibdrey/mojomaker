@@ -32,6 +32,7 @@ class UserController < ApplicationController
        if @user && @user.authenticate(params[:password])
         session[:user_id] = @user.id
         @session = session
+        binding.pry
         erb :"/user/homepage"
        #else
         #redirect to "/user/login"
